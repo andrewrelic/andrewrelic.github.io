@@ -1,4 +1,33 @@
-<section class="top-carousel-wrap">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Blog Design with Sticky Gallery</title>
+    
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css"> 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo"><a href="#">ModernBlog</a></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="top-carousel-wrap">
         <div class="carousel-inner">
             <div class="carousel-panel" style="background-image: url('foggyland.jpg');">
                 <div class="overlay">Latest Article: Foggyland Adventures</div>
@@ -14,108 +43,15 @@
             </div>
         </div>
     </section>
+    
     <section class="hero-section">
-    ```
+        <div class="container">
+            <div class="hero-content">
+                <h2>Welcome to Our Creative Space</h2>
+                <p>Dive into insightful articles, stunning designs, and a community passionate about modern web development and beyond.</p>
+                <a href="#" class="btn btn-primary">Start Reading</a>
+            </div>
+        </div>
+    </section>
 
----
-
-## 🎨 File 2: `styles.css` (New Carousel Styles)
-
-Now, we need to completely redefine the look of this section in your `styles.css`.
-
-**Replace your entire original "Sticky Photo Gallery" CSS block with this new "Top Carousel" CSS:**
-
-```css
-/*
- * --------------------------------
- * ⭐ 3. TOP CAROUSEL STYLES ⭐
- * (Replaces the Sticky Gallery CSS block)
- * --------------------------------
- */
-
-.top-carousel-wrap {
-    /* Make the carousel stick right below the main header */
-    position: sticky;
-    top: 5.5rem; /* Ensure this matches the bottom of your main-header */
-    z-index: 50; 
-    
-    /* Set a height to ensure it doesn't take up the whole page */
-    height: 35vh; /* Takes up 35% of the viewport height */
-    
-    background-color: var(--primary-bg);
-    border-bottom: 2px solid var(--border-color);
-    box-shadow: 0 4px 15px var(--shadow-medium);
-    
-    /* Enables horizontal scrolling and hides the main scrollbar */
-    overflow-x: auto; 
-    overflow-y: hidden;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch; 
-}
-
-/* Hide the scrollbar for aesthetic purposes */
-.top-carousel-wrap::-webkit-scrollbar {
-    display: none; 
-}
-
-.carousel-inner {
-    display: flex; /* Arranges the panels horizontally */
-    height: 100%;
-    /* No padding here, we want the panels to touch */
-}
-
-.carousel-panel {
-    /* Each panel takes up 70% of the viewport width, allowing two and a half to show */
-    width: 70vw; 
-    flex-shrink: 0; /* Prevents the panels from shrinking */
-    
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-    display: flex;
-    align-items: flex-end; /* Puts text at the bottom */
-    justify-content: flex-start; /* Aligns text to the left */
-    
-    /* Creates a subtle gap between panels */
-    margin-right: 1rem; 
-    
-    /* Optional: Add slight rounding to the corners */
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.overlay {
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay for readability */
-    color: white;
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 700;
-    padding: 1.5rem;
-    width: 100%;
-}
-
-
-/* Adjustments for Layout Shift due to the new sticky element */
-/* The hero section needs to be pushed down more now because the carousel is taller */
-.hero-section {
-    padding-top: 5rem; 
-    margin-top: 2rem; /* Give some visual space below the sticky element */
-}
-
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-    .top-carousel-wrap {
-        top: 10rem; /* Adjust top position for stacked header */
-        height: 30vh; /* Slightly less height on small screens */
-    }
-
-    .carousel-panel {
-        width: 90vw; /* Take up more width on small screens */
-    }
-    
-    .overlay {
-        font-size: 1.1rem;
-    }
-}
+    <div class="container main-
