@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Blog Design</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>Modern Blog Design with Sticky Gallery</title>
+    
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="styles.css"> 
     
@@ -24,6 +25,15 @@
         </div>
     </header>
 
+    <section class="sticky-gallery-wrap">
+        <div class="gallery-inner">
+            <div class="gallery-item"><img src="https://via.placeholder.com/150x150/ffc0cb/ffffff?text=Travel" alt="Travel Photo"></div>
+            <div class="gallery-item"><img src="https://via.placeholder.com/150x150/add8e6/ffffff?text=Code" alt="Coding Photo"></div>
+            <div class="gallery-item"><img src="https://via.placeholder.com/150x150/90ee90/ffffff?text=Food" alt="Food Photo"></div>
+            <div class="gallery-item"><img src="https://via.placeholder.com/150x150/ffa07a/ffffff?text=Design" alt="Design Photo"></div>
+            <div class="gallery-item"><img src="https://via.placeholder.com/150x150/d8bfd8/ffffff?text=Life" alt="Lifestyle Photo"></div>
+        </div>
+    </section>
     <section class="hero-section">
         <div class="container">
             <div class="hero-content">
@@ -50,7 +60,6 @@
                     </div>
                 </div>
             </article>
-
             <article class="article-card">
                 <div class="article-image" style="background-image: url('https://via.placeholder.com/600x400/a2d2ff/ffffff?text=Article+Image+2');"></div>
                 <div class="article-body">
@@ -60,87 +69,4 @@
                         Boost your productivity and reclaim your work-life balance with proven time management strategies tailored for developers. Focus, deep work, and more...
                     </p>
                     <div class="article-meta">
-                        <span><i class="fas fa-user"></i> By John Smith</span>
-                        <span><i class="fas fa-calendar-alt"></i> Oct 18, 2025</span>
-                    </div>
-                </div>
-            </article>
-
-            <article class="article-card">
-                <div class="article-image" style="background-image: url('https://via.placeholder.com/600x400/bde0fe/ffffff?text=Article+Image+3');"></div>
-                <div class="article-body">
-                    <p class="article-category">Technology</p>
-                    <h2><a href="#">The Rise of AI in Front-End Development Workflows</a></h2>
-                    <p class="article-excerpt">
-                        AI tools are transforming how we build websites. Discover how artificial intelligence is enhancing everything from code generation to design systems...
-                    </p>
-                    <div class="article-meta">
-                        <span><i class="fas fa-user"></i> By Emily White</span>
-                        <span><i class="fas fa-calendar-alt"></i> Oct 10, 2025</span>
-                    </div>
-                </div>
-            </article>
-        </main>
-
-        <aside class="sidebar">
-            <div class="sidebar-widget about-widget">
-                <h3>About Me</h3>
-                <img src="https://via.placeholder.com/100/606c38/ffffff?text=Avatar" alt="Author Avatar" class="avatar">
-                <p>Hello! I'm Alex, a passionate web enthusiast sharing insights on coding, design, and digital trends. Join me on this journey!</p>
-                <a href="#" class="btn btn-secondary">Read More</a>
-            </div>
-
-            <div class="sidebar-widget categories-widget">
-                <h3>Categories</h3>
-                <ul>
-                    <li><a href="#">Web Development <span>(12)</span></a></li>
-                    <li><a href="#">Design Principles <span>(8)</span></a></li>
-                    <li><a href="#">Productivity Hacks <span>(5)</span></a></li>
-                    <li><a href="#">Digital Marketing <span>(15)</span></a></li>
-                </ul>
-            </div>
-
-            <div class="sidebar-widget latest-posts-widget">
-                <h3>Latest Posts</h3>
-                <ul>
-                    <li><a href="#">The Future of JavaScript Frameworks</a></li>
-                    <li><a href="#">10 Tips for a Faster Website</a></li>
-                    <li><a href="#">Understanding SEO in 2025</a></li>
-                </ul>
-            </div>
-        </aside>
-    </div>
-
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col about-col">
-                    <h3>ModernBlog</h3>
-                    <p>Your go-to source for modern web development, design, and digital insights. Stay curious, stay creative.</p>
-                </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Connect</h3>
-                    <ul>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">Email</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 ModernBlog. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+                        <span><i class="fas fa-
