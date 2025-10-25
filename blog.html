@@ -1,161 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Blog Design with Sticky Gallery</title>
-    
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="styles.css"> 
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
-</head>
-<body>
-    <header class="main-header">
-        <div class="container">
-            <h1 class="logo"><a href="#">ModernBlog</a></h1>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Categories</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="sticky-gallery-wrap">
-        <div class="gallery-inner">
-            <div class="gallery-item"><img src="foggyland.jpg?text=Travel" alt="Travel Photo"></div>
-            <div class="gallery-item"><img src="foggyland.jpg?text=Code" alt="Coding Photo"></div>
-            <div class="gallery-item"><img src="foggyland.jpg?text=Food" alt="Food Photo"></div>
-            <div class="gallery-item"><img src="foggyland.jpg?text=Design" alt="Design Photo"></div>
-            <div class="gallery-item"><img src="foggyland.jpg?text=Life" alt="Lifestyle Photo"></div>
+<section class="top-carousel-wrap">
+        <div class="carousel-inner">
+            <div class="carousel-panel" style="background-image: url('foggyland.jpg');">
+                <div class="overlay">Latest Article: Foggyland Adventures</div>
+            </div>
+            <div class="carousel-panel" style="background-image: url('foggyland.jpg');">
+                 <div class="overlay">Design Trends of 2025</div>
+            </div>
+            <div class="carousel-panel" style="background-image: url('foggyland.jpg');">
+                 <div class="overlay">Productivity Hacks</div>
+            </div>
+            <div class="carousel-panel" style="background-image: url('foggyland.jpg');">
+                 <div class="overlay">Coding with Clarity</div>
+            </div>
         </div>
     </section>
     <section class="hero-section">
-        <div class="container">
-            <div class="hero-content">
-                <h2>Welcome to Our Creative Space</h2>
-                <p>Dive into insightful articles, stunning designs, and a community passionate about modern web development and beyond.</p>
-                <a href="#" class="btn btn-primary">Start Reading</a>
-            </div>
-        </div>
-    </section>
+    ```
 
-    <div class="container main-content">
-        <main class="main-articles">
-            <article class="article-card">
-                <div class="article-image" style="background-image: url('foggyland.jpg');"></div>
-                <div class="article-body">
-                    <p class="article-category">Web Design</p>
-                    <h2><a href="#">Mastering Modern CSS Layouts with Grid and Flexbox</a></h2>
-                    <p class="article-excerpt">
-                        Explore the power of CSS Grid and Flexbox to create responsive and beautiful layouts effortlessly. From simple components to complex page structures...
-                    </p>
-                    <div class="article-meta">
-                        <span><i class="fas fa-user"></i> By Jane Doe</span>
-                        <span><i class="fas fa-calendar-alt"></i> Oct 24, 2025</span>
-                    </div>
-                </div>
-            </article>
-             <article class="article-card">
-                <div class="article-image" style="background-image: url('https://via.placeholder.com/600x400/a2d2ff/ffffff?text=Article+Image+2');"></div>
-                <div class="article-body">
-                    <p class="article-category">Productivity</p>
-                    <h2><a href="#">The Developer's Guide to Effective Time Management</a></h2>
-                    <p class="article-excerpt">
-                        Boost your productivity and reclaim your work-life balance with proven time management strategies tailored for developers. Focus, deep work, and more...
-                    </p>
-                    <div class="article-meta">
-                        <span><i class="fas fa-user"></i> By John Smith</span>
-                        <span><i class="fas fa-calendar-alt"></i> Oct 18, 2025</span>
-                    </div>
-                </div>
-            </article>
-            <article class="article-card">
-                <div class="article-image" style="background-image: url('https://via.placeholder.com/600x400/bde0fe/ffffff?text=Article+Image+3');"></div>
-                <div class="article-body">
-                    <p class="article-category">Technology</p>
-                    <h2><a href="#">The Rise of AI in Front-End Development Workflows</a></h2>
-                    <p class="article-excerpt">
-                        AI tools are transforming how we build websites. Discover how artificial intelligence is enhancing everything from code generation to design systems...
-                    </p>
-                    <div class="article-meta">
-                        <span><i class="fas fa-user"></i> By Emily White</span>
-                        <span><i class="fas fa-calendar-alt"></i> Oct 10, 2025</span>
-                    </div>
-                </div>
-            </article>
-        </main>
-        <aside class="sidebar">
-            <div class="sidebar-widget about-widget">
-                <h3>About Me</h3>
-                <img src="https://via.placeholder.com/100/606c38/ffffff?text=Avatar" alt="Author Avatar" class="avatar">
-                <p>Hello! I'm Alex, a passionate web enthusiast sharing insights on coding, design, and digital trends. Join me on this journey!</p>
-                <a href="#" class="btn btn-secondary">Read More</a>
-            </div>
+---
 
-            <div class="sidebar-widget categories-widget">
-                <h3>Categories</h3>
-                <ul>
-                    <li><a href="#">Web Development <span>(12)</span></a></li>
-                    <li><a href="#">Design Principles <span>(8)</span></a></li>
-                    <li><a href="#">Productivity Hacks <span>(5)</span></a></li>
-                    <li><a href="#">Digital Marketing <span>(15)</span></a></li>
-                </ul>
-            </div>
+## 🎨 File 2: `styles.css` (New Carousel Styles)
 
-            <div class="sidebar-widget latest-posts-widget">
-                <h3>Latest Posts</h3>
-                <ul>
-                    <li><a href="#">The Future of JavaScript Frameworks</a></li>
-                    <li><a href="#">10 Tips for a Faster Website</a></li>
-                    <li><a href="#">Understanding SEO in 2025</a></li>
-                </ul>
-            </div>
-        </aside>
-    </div>
+Now, we need to completely redefine the look of this section in your `styles.css`.
 
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col about-col">
-                    <h3>ModernBlog</h3>
-                    <p>Your go-to source for modern web development, design, and digital insights. Stay curious, stay creative.</p>
-                </div>
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Connect</h3>
-                    <ul>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">Email</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="social-links">
-                    <a href="https://twitter.com/acetheriver" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="https://instagram.com/acetheriver" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/andrewccnguyen" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.youtube.com/@expertved" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                </div>
-                <p>&copy; 2025 ModernBlog. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+**Replace your entire original "Sticky Photo Gallery" CSS block with this new "Top Carousel" CSS:**
+
+```css
+/*
+ * --------------------------------
+ * ⭐ 3. TOP CAROUSEL STYLES ⭐
+ * (Replaces the Sticky Gallery CSS block)
+ * --------------------------------
+ */
+
+.top-carousel-wrap {
+    /* Make the carousel stick right below the main header */
+    position: sticky;
+    top: 5.5rem; /* Ensure this matches the bottom of your main-header */
+    z-index: 50; 
+    
+    /* Set a height to ensure it doesn't take up the whole page */
+    height: 35vh; /* Takes up 35% of the viewport height */
+    
+    background-color: var(--primary-bg);
+    border-bottom: 2px solid var(--border-color);
+    box-shadow: 0 4px 15px var(--shadow-medium);
+    
+    /* Enables horizontal scrolling and hides the main scrollbar */
+    overflow-x: auto; 
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch; 
+}
+
+/* Hide the scrollbar for aesthetic purposes */
+.top-carousel-wrap::-webkit-scrollbar {
+    display: none; 
+}
+
+.carousel-inner {
+    display: flex; /* Arranges the panels horizontally */
+    height: 100%;
+    /* No padding here, we want the panels to touch */
+}
+
+.carousel-panel {
+    /* Each panel takes up 70% of the viewport width, allowing two and a half to show */
+    width: 70vw; 
+    flex-shrink: 0; /* Prevents the panels from shrinking */
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    align-items: flex-end; /* Puts text at the bottom */
+    justify-content: flex-start; /* Aligns text to the left */
+    
+    /* Creates a subtle gap between panels */
+    margin-right: 1rem; 
+    
+    /* Optional: Add slight rounding to the corners */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay for readability */
+    color: white;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+
+/* Adjustments for Layout Shift due to the new sticky element */
+/* The hero section needs to be pushed down more now because the carousel is taller */
+.hero-section {
+    padding-top: 5rem; 
+    margin-top: 2rem; /* Give some visual space below the sticky element */
+}
+
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .top-carousel-wrap {
+        top: 10rem; /* Adjust top position for stacked header */
+        height: 30vh; /* Slightly less height on small screens */
+    }
+
+    .carousel-panel {
+        width: 90vw; /* Take up more width on small screens */
+    }
+    
+    .overlay {
+        font-size: 1.1rem;
+    }
+}
