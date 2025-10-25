@@ -1,4 +1,126 @@
-<footer class="main-footer">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Blog Design with Sticky Gallery</title>
+    
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css"> 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo"><a href="#">ModernBlog</a></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="sticky-gallery-wrap">
+        <div class="gallery-inner">
+            <div class="gallery-item"><img src="https://via.placeholder.com/150x150/ffc0cb/ffffff?text=Travel" alt="Travel Photo"></div>
+            <div class="gallery-item"><img src="https://via.placeholder.com/150x150/add8e6/ffffff?text=Code" alt="Coding Photo"></div>
+            <div class="gallery-item"><img src="https://via.placeholder.com/150x150/90ee90/ffffff?text=Food" alt="Food Photo"></div>
+            <div class="gallery-item"><img src="https://via.placeholder.com/150x150/ffa07a/ffffff?text=Design" alt="Design Photo"></div>
+            <div class="gallery-item"><img src="https://via.placeholder.com/150x150/d8bfd8/ffffff?text=Life" alt="Lifestyle Photo"></div>
+        </div>
+    </section>
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Welcome to Our Creative Space</h2>
+                <p>Dive into insightful articles, stunning designs, and a community passionate about modern web development and beyond.</p>
+                <a href="#" class="btn btn-primary">Start Reading</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container main-content">
+        <main class="main-articles">
+            <article class="article-card">
+                <div class="article-image" style="background-image: url('foggyland.jpg');"></div>
+                <div class="article-body">
+                    <p class="article-category">Web Design</p>
+                    <h2><a href="#">Mastering Modern CSS Layouts with Grid and Flexbox</a></h2>
+                    <p class="article-excerpt">
+                        Explore the power of CSS Grid and Flexbox to create responsive and beautiful layouts effortlessly. From simple components to complex page structures...
+                    </p>
+                    <div class="article-meta">
+                        <span><i class="fas fa-user"></i> By Jane Doe</span>
+                        <span><i class="fas fa-calendar-alt"></i> Oct 24, 2025</span>
+                    </div>
+                </div>
+            </article>
+             <article class="article-card">
+                <div class="article-image" style="background-image: url('https://via.placeholder.com/600x400/a2d2ff/ffffff?text=Article+Image+2');"></div>
+                <div class="article-body">
+                    <p class="article-category">Productivity</p>
+                    <h2><a href="#">The Developer's Guide to Effective Time Management</a></h2>
+                    <p class="article-excerpt">
+                        Boost your productivity and reclaim your work-life balance with proven time management strategies tailored for developers. Focus, deep work, and more...
+                    </p>
+                    <div class="article-meta">
+                        <span><i class="fas fa-user"></i> By John Smith</span>
+                        <span><i class="fas fa-calendar-alt"></i> Oct 18, 2025</span>
+                    </div>
+                </div>
+            </article>
+            <article class="article-card">
+                <div class="article-image" style="background-image: url('https://via.placeholder.com/600x400/bde0fe/ffffff?text=Article+Image+3');"></div>
+                <div class="article-body">
+                    <p class="article-category">Technology</p>
+                    <h2><a href="#">The Rise of AI in Front-End Development Workflows</a></h2>
+                    <p class="article-excerpt">
+                        AI tools are transforming how we build websites. Discover how artificial intelligence is enhancing everything from code generation to design systems...
+                    </p>
+                    <div class="article-meta">
+                        <span><i class="fas fa-user"></i> By Emily White</span>
+                        <span><i class="fas fa-calendar-alt"></i> Oct 10, 2025</span>
+                    </div>
+                </div>
+            </article>
+        </main>
+        <aside class="sidebar">
+            <div class="sidebar-widget about-widget">
+                <h3>About Me</h3>
+                <img src="https://via.placeholder.com/100/606c38/ffffff?text=Avatar" alt="Author Avatar" class="avatar">
+                <p>Hello! I'm Alex, a passionate web enthusiast sharing insights on coding, design, and digital trends. Join me on this journey!</p>
+                <a href="#" class="btn btn-secondary">Read More</a>
+            </div>
+
+            <div class="sidebar-widget categories-widget">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#">Web Development <span>(12)</span></a></li>
+                    <li><a href="#">Design Principles <span>(8)</span></a></li>
+                    <li><a href="#">Productivity Hacks <span>(5)</span></a></li>
+                    <li><a href="#">Digital Marketing <span>(15)</span></a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget latest-posts-widget">
+                <h3>Latest Posts</h3>
+                <ul>
+                    <li><a href="#">The Future of JavaScript Frameworks</a></li>
+                    <li><a href="#">10 Tips for a Faster Website</a></li>
+                    <li><a href="#">Understanding SEO in 2025</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="main-footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col about-col">
@@ -26,9 +148,8 @@
             </div>
             <div class="footer-bottom">
                 <div class="social-links">
-                    <a href="https://twitter.com/acetheriver target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="https://facebook.com/yourprofile" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/acetheriver" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/acetheriver" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.linkedin.com/in/andrewccnguyen" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://www.youtube.com/@expertved" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 </div>
