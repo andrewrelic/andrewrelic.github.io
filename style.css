@@ -1,0 +1,184 @@
+:root {
+    --primary-color: #333;
+    --secondary-color: #f4f4f4;
+    --accent-color: #007bff;
+    --max-width: 1100px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #fff;
+    color: var(--primary-color);
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* --- Header & Navigation --- */
+
+header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    float: left;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* --- Main Layout --- */
+
+.main-content {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.main-articles {
+    flex: 3; /* Takes up 66% of the space */
+}
+
+.sidebar {
+    flex: 1; /* Takes up 33% of the space */
+    background: var(--secondary-color);
+    padding: 20px;
+    border-radius: 5px;
+    max-height: fit-content;
+}
+
+/* --- Article Styling --- */
+
+.article-post {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.article-post h2 {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.article-meta {
+    color: #777;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.read-more {
+    display: inline-block;
+    background: var(--accent-color);
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top: 15px;
+}
+
+.read-more:hover {
+    background: #0056b3;
+}
+
+/* --- Sidebar Styling --- */
+
+.sidebar h3 {
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 8px 0;
+    border-bottom: 1px dotted #ccc;
+}
+
+.sidebar ul li:last-child {
+    border-bottom: none;
+}
+
+.sidebar a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    color: var(--accent-color);
+}
+
+/* --- Footer --- */
+
+footer {
+    background: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+/* --- Responsiveness (Mobile View) --- */
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    header h1,
+    nav {
+        float: none;
+        text-align: center;
+    }
+
+    nav ul {
+        padding-top: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+}
