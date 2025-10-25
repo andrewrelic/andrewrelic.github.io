@@ -1,3 +1,70 @@
+/*
+ * --------------------------------
+ * ⭐ 1. ROOT VARIABLES (The Warm, Calm Palette) ⭐
+ * --------------------------------
+ */
+:root {
+    --primary-bg: #fdfaf7;     /* Soft Cream / Off-White for overall background */
+    --secondary-bg: #ffffff;   /* Pure White for cards/widgets */
+    --primary-color: #3f3933;  /* Deep Brown/Charcoal for primary text */
+    --secondary-color: #8c847d; /* Muted Taupe/Gray for lighter text */
+    --accent-color: #a3665a;   /* Deep Terracotta / Muted Rust for highlights */
+    --accent-hover: #7d4e44;   /* Darker Rust on hover */
+    --border-color: #e6e0d9;   /* Soft Border color */
+    --shadow-light: rgba(0, 0, 0, 0.08);
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+    --max-width: 1200px;
+}
+
+/*
+ * --------------------------------
+ * 2. BASE STYLES (Required for variable usage)
+ * --------------------------------
+ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.7;
+    background: var(--primary-bg);
+    color: var(--primary-color);
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
+}
+/*
+ * --------------------------------
+ * 3. STICKY GALLERY CSS (Your Provided Code)
+ * --------------------------------
+ */
 /* --- Sticky Photo Gallery --- */
 .sticky-gallery-wrap {
     /* Make the gallery stick right below the main header */
@@ -23,7 +90,8 @@
 .gallery-inner {
     display: flex;
     padding: 0.5rem 2rem;
-    gap: 1rem;
+    /* Updated gap from previous step */
+    gap: 1.5rem; 
     align-items: center;
     justify-content: center; /* Center items if they don't fill the screen */
 }
@@ -42,11 +110,10 @@
     box-shadow: 0 0 0 3px var(--accent-color);
 }
 
-/* Find this section in your styles.css file and make the change */
 
 .gallery-item img {
-    /* Updated size: from 50px to 80px */
-    width: 80px; /* Bigger, more prominent size */
+    /* Updated size from previous step */
+    width: 80px; 
     height: 80px;
     
     object-fit: cover;
@@ -54,30 +121,6 @@
     display: block;
 }
 
-/* You might also want to increase the space between the items */
-.gallery-inner {
-    display: flex;
-    padding: 0.5rem 2rem;
-    gap: 1.5rem; /* Increased gap for better spacing */
-    align-items: center;
-    justify-content: center;
-}
-
 /* Adjustments for Layout Shift due to the new sticky element */
 .hero-section {
-    /* Added padding-top to ensure the content doesn't jump up under the gallery */
-    padding-top: 5rem; 
-    margin-top: 0; /* Removed previous margin to make it flush with the gallery */
-}
-
-/* Mobile Adjustments for Sticky Gallery */
-@media (max-width: 768px) {
-    .sticky-gallery-wrap {
-        /* Adjust top position to account for stacked header elements */
-        top: 10rem; 
-    }
-
-    .gallery-inner {
-        justify-content: flex-start; /* Left-align on mobile for better scroll feel */
-    }
-}
+    /* Added padding-top to ensure the content doesn't
