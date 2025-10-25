@@ -124,3 +124,64 @@ h1, h2, h3, h4, h5, h6 {
 /* Adjustments for Layout Shift due to the new sticky element */
 .hero-section {
     /* Added padding-top to ensure the content doesn't
+
+/*
+ * --------------------------------
+ * ⭐ 4. MOBILE NAVIGATION (Hamburger Menu) ⭐
+ * --------------------------------
+ */
+@media (max-width: 768px) {
+    /* Show the hamburger button */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Set up the main navigation to slide out */
+    .main-nav {
+        /* Hide menu off-screen by default */
+        position: absolute;
+        top: 100%; /* Position it below the header */
+        left: 0;
+        width: 100%;
+        background-color: var(--secondary-bg); /* White background for the slide-out menu */
+        border-top: 1px solid var(--border-color);
+        box-shadow: 0 5px 10px var(--shadow-medium);
+        z-index: 100;
+        
+        /* Slide animation properties */
+        transform: translateY(-100%); 
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease;
+    }
+
+    /* State when the menu is active (toggled by JavaScript) */
+    .main-nav.active {
+        transform: translateY(0); /* Slides down into view */
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Style the navigation list items */
+    .main-nav ul {
+        flex-direction: column; /* Stack links vertically */
+        padding: 1rem 0;
+        width: 100%;
+    }
+
+    .main-nav ul li {
+        text-align: center;
+        width: 100%;
+    }
+
+    .main-nav ul li a {
+        display: block;
+        padding: 0.8rem 1rem;
+        border-bottom: 1px solid var(--border-color);
+        font-size: 1.1rem;
+    }
+    
+    .main-nav ul li:last-child a {
+        border-bottom: none;
+    }
+}
