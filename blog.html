@@ -16,7 +16,8 @@
     <header class="main-header">
         <div class="container">
             <h1 class="logo"><a href="#">ModernBlog</a></h1>
-            <nav class="main-nav">
+            
+            <nav class="main-nav" id="mainNav">
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
@@ -24,6 +25,10 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
+            
+            <button class="menu-toggle" aria-controls="mainNav" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
 
@@ -166,5 +171,28 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mainNav = document.getElementById('mainNav');
+
+            menuToggle.addEventListener('click', function() {
+                // Toggle the 'active' class on the navigation menu
+                mainNav.classList.toggle('active');
+
+                // Toggle the aria-expanded attribute for accessibility
+                let isExpanded = this.getAttribute('aria-expanded') === 'true' || false;
+                this.setAttribute('aria-expanded', !isExpanded);
+                
+                // Change icon from hamburger to 'X' (times icon)
+                if (mainNav.classList.contains('active')) {
+                    this.querySelector('i').className = 'fas fa-times';
+                } else {
+                    this.querySelector('i').className = 'fas fa-bars';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
