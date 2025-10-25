@@ -42,12 +42,25 @@
     box-shadow: 0 0 0 3px var(--accent-color);
 }
 
+/* Find this section in your styles.css file and make the change */
+
 .gallery-item img {
-    width: 50px; /* Small, prominent size */
-    height: 50px;
+    /* Updated size: from 50px to 80px */
+    width: 80px; /* Bigger, more prominent size */
+    height: 80px;
+    
     object-fit: cover;
     border-radius: 50%;
     display: block;
+}
+
+/* You might also want to increase the space between the items */
+.gallery-inner {
+    display: flex;
+    padding: 0.5rem 2rem;
+    gap: 1.5rem; /* Increased gap for better spacing */
+    align-items: center;
+    justify-content: center;
 }
 
 /* Adjustments for Layout Shift due to the new sticky element */
