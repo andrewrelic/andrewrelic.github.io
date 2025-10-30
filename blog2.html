@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Blog Design with Dynamic Content</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css"> 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <h1 class="logo"><a href="#">**ModernBlog**</a></h1>
+            
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="#" class="nav-link">Home</a></li>
+                    <li><a href="#" class="nav-link">About</a></li>
+                    <li><a href="#" class="nav-link">Categories</a></li>
+                    <li><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="menu-toggle" aria-controls="mainNav" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="top-carousel-wrap">
+        <div class="carousel-inner" id="carouselInner">
+            <div class="carousel-panel active" style="background-image: url('foggyland.jpg');">
+                <div class="overlay">
+                    <p class="tag">Featured</p>
+                    <h2>Latest Article: Foggyland Adventures</h2>
+                    <a href="#" class="btn btn-tertiary">Read More</a>
+                </div>
+            </div>
+            <div class="carousel-panel" style="background-image: url('https://via.placeholder.com/1600x600/606c38/ffffff?text=Design+Trends+2025');">
+                 <div class="overlay">
+                    <p class="tag">Design</p>
+                    <h2>Design Trends of 2025</h2>
+                    <a href="#" class="btn btn-tertiary">Explore</a>
+                 </div>
+            </div>
+            <div class="carousel-panel" style="background-image: url('https://via.placeholder.com/1600x600/dda15e/ffffff?text=Productivity+Hacks');">
+                 <div class="overlay">
+                    <p class="tag">Lifestyle</p>
+                    <h2>Productivity Hacks</h2>
+                    <a href="#" class="btn btn-tertiary">Discover</a>
+                 </div>
+            </div>
+        </div>
+        <div class="carousel-nav">
+            <button class="prev" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
+            <button class="next" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+    
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Welcome to Our Creative Space</h2>
+                <p>Dive into insightful articles, stunning designs, and a community passionate about modern web development and beyond.</p>
+                <a href="#" class="btn btn-primary">Start Reading</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container main-content-grid">
+        <main class="main-articles">
+            <article class="article-card">
+                <div class="article-image-wrap">
+                    <div class="article-image" style="background-image: url('foggyland.jpg');"></div>
+                    <p class="category-pill">Web Design</p>
+                </div>
+                <div class="article-body">
+                    <h2><a href="#">Mastering Modern CSS Layouts with Grid and Flexbox</a></h2>
+                    <p class="article-excerpt">
+                        Explore the power of CSS Grid and Flexbox to create responsive and beautiful layouts effortlessly. From simple components to complex page structures...
+                    </p>
+                    <div class="article-meta">
+                        <span><i class="fas fa-user"></i> Jane Doe</span>
+                        <span class="dot-separator">·</span>
+                        <span><i class="fas fa-calendar-alt"></i> Oct 24, 2025</span>
+                    </div>
+                    <a href="#" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+            <article class="article-card">
+                <div class="article-image-wrap">
+                    <div class="article-image" style="background-image: url('https://via.placeholder.com/600x400/a2d2ff/ffffff?text=Productivity+Image');"></div>
+                    <p class="category-pill">Productivity</p>
+                </div>
+                <div class="article-body">
+                    <h2><a href="#">The Developer's Guide to Effective Time Management</a></h2>
+                    <p class="article-excerpt">
+                        Boost your productivity and reclaim your work-life balance with proven time management strategies tailored for developers. Focus, deep work, and more...
+                    </p>
+                    <div class="article-meta">
+                        <span><i class="fas fa-user"></i> John Smith</span>
+                        <span class="dot-separator">·</span>
+                        <span><i class="fas fa-calendar-alt"></i> Oct 18, 2025</span>
+                    </div>
+                    <a href="#" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+            </main>
+        
+        <aside class="sidebar">
+            <div class="sidebar-widget search-widget">
+                <input type="search" placeholder="Search the blog..." class="search-input">
+                <button class="search-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="sidebar-widget about-widget">
+                <h3>**About The Author**</h3>
+                <img src="https://via.placeholder.com/100/606c38/ffffff?text=Avatar" alt="Author Avatar" class="avatar">
+                <p>Hello! I'm Alex, a passionate web enthusiast sharing insights on coding, design, and digital trends. Join me on this journey!</p>
+                <a href="#" class="btn btn-secondary btn-full">Get to Know Me</a>
+            </div>
+
+            <div class="sidebar-widget categories-widget">
+                <h3>**Categories**</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-code"></i> Web Development <span>(12)</span></a></li>
+                    <li><a href="#"><i class="fas fa-pencil-ruler"></i> Design Principles <span>(8)</span></a></li>
+                    <li><a href="#"><i class="fas fa-clock"></i> Productivity Hacks <span>(5)</span></a></li>
+                    <li><a href="#"><i class="fas fa-chart-line"></i> Digital Marketing <span>(15)</span></a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about-col">
+                    <h3>**ModernBlog**</h3>
+                    <p>Your go-to source for modern web development, design, and digital insights. Stay curious, stay creative.</p>
+                    <div class="social-links-footer">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>**Quick Links**</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Blog Archive</a></li>
+                        <li><a href="#">Style Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-col">
+                    <h3>**Stay Connected**</h3>
+                    <p>Subscribe to our newsletter for the latest updates.</p>
+                    <form class="subscribe-form">
+                        <input type="email" placeholder="Your Email Address">
+                        <button type="submit" class="btn-subscribe"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 **ModernBlog**. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
