@@ -3,53 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andrew Nguyen | Projects & Blog</title>
-    <link rel="stylesheet" href="bfstyle.css">
-    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+    <title>Andrew Nguyen | Dev & Creative</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; }
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 </head>
-<body>
+<body class="font-sans antialiased">
 
-    <header>
-        <h1>Andrew Nguyen</h1>
-        <p>Operations & Infrastructure | Developer | Tennis Enthusiast</p>
-        <nav>
-            <a href="#extensions">Extensions</a>
-            <a href="#youtube">YouTube</a>
-            <a href="#blog">Blog</a>
-        </nav>
+    <header class="py-20 px-6 text-center">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">
+            Andrew <span class="gradient-text">Nguyen</span>
+        </h1>
+        <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto">
+            Operations Professional & Developer building tools for the modern web.
+        </p>
+        <div class="mt-8 flex justify-center gap-4">
+            <a href="#extensions" class="px-6 py-3 bg-sky-600 hover:bg-sky-500 rounded-full font-semibold transition">My Extensions</a>
+            <a href="#youtube" class="px-6 py-3 glass hover:bg-slate-800 rounded-full font-semibold transition">Watch Channel</a>
+        </div>
     </header>
 
-    <main>
+    <main class="max-w-5xl mx-auto px-6 space-y-24 pb-20">
+        
         <section id="extensions">
-            <h2><i class="fab fa-firefox-browser"></i> Firefox Extensions</h2>
-            <div class="card">
-                <h3>Extension Name</h3>
-                <p>A brief description of what your extension does and how it improves the browsing experience.</p>
-                <a href="YOUR_AMO_LINK_HERE" class="btn">View on Firefox Add-ons</a>
+            <div class="flex items-center gap-3 mb-8">
+                <i class="fab fa-firefox-browser text-3xl text-orange-500"></i>
+                <h2 class="text-3xl font-bold">Featured Extension</h2>
+            </div>
+            <div class="glass p-8 rounded-3xl flex flex-col md:flex-row gap-8 items-center">
+                <div class="flex-1">
+                    <span class="text-sky-400 font-mono text-sm uppercase tracking-widest">Open Source</span>
+                    <h3 class="text-2xl font-bold mt-2 mb-4">Extension Project Name</h3>
+                    <p class="text-slate-400 mb-6 leading-relaxed">
+                        A modern Firefox extension built to streamline your workflow. Features include real-time data processing and a clean UI tailored for power users.
+                    </p>
+                    <a href="#" class="inline-flex items-center text-sky-400 hover:text-sky-300 font-semibold">
+                        View on Firefox Add-ons <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                <div class="w-full md:w-1/3 aspect-video bg-slate-800 rounded-xl overflow-hidden border border-slate-700 flex items-center justify-center">
+                   <i class="fas fa-code text-5xl text-slate-700"></i>
+                </div>
             </div>
         </section>
 
         <section id="youtube">
-            <h2><i class="fab fa-youtube"></i> Featured Video</h2>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+            <div class="flex items-center gap-3 mb-8">
+                <i class="fab fa-youtube text-3xl text-red-600"></i>
+                <h2 class="text-3xl font-bold">Latest from YouTube</h2>
             </div>
-            <p><a href="YOUR_YOUTUBE_CHANNEL_LINK" class="btn">Subscribe to Channel</a></p>
-        </section>
-
-        <section id="blog">
-            <h2>Latest Posts</h2>
-            <article>
-                <h3>Building my first Firefox Extension</h3>
-                <small>April 4, 2026</small>
-                <p>Insights into the development process, debugging, and publishing to the store...</p>
-            </article>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Andrew Nguyen. Built with HTML & CSS.</p>
-    </footer>
-
-</body>
-</html>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-slate-700">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold mb-4">Tech, Code & Infrastructure</h3>
+                    <p class="text-slate-400 mb-6
