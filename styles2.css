@@ -1,113 +1,55 @@
-:root {
-    --primary: #2563eb;
-    --dark: #1e293b;
-    --light: #f8fafc;
-    --text: #334155;
-    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const blogContainer = document.getElementById('blog-container');
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+    fetch('blog_posts.csv')
+        .then(response => {
+            if (!response.ok) throw new Error("CSV not found");
+            return response.text();
+        })
+        .then(csvText => {
+            const posts = parseCSV(csvText);
+            // Reverse the array so the bottom of the CSV is displayed first
+            renderPosts(posts.reverse()); 
+        })
+        .catch(err => {
+            blogContainer.innerHTML = `<div class="p-8 text-red-400 text-center">Error: ${err.message}</div>`;
+        });
 
-body {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.7;
-    color: var(--text);
-    background-color: #f1f5f9;
-}
+    function parseCSV(text) {
+        const lines = text.split(/\r?\n/).filter(line => line.trim() !== "");
+        const headers = lines[0].split(',').map(h => h.trim());
+        
+        return lines.slice(1).map(line => {
+            const values = line.match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g) || [];
+            let post = {};
+            headers.forEach((header, i) => {
+                post[header] = values[i] ? values[i].replace(/"/g, "").trim() : "";
+            });
+            return post;
+        });
+    }
 
-h1, h2, h3 { font-family: 'Montserrat', sans-serif; color: var(--dark); }
+    function renderPosts(posts) {
+        if (posts.length === 0) {
+            blogContainer.innerHTML = "<p class='text-slate-500'>No posts found.</p>";
+            return;
+        }
 
-.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-
-/* Header & Nav */
-.main-header {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(12px);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    padding: 1rem 0;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-
-.header-content { display: flex; justify-content: space-between; align-items: center; }
-.logo a { text-decoration: none; color: var(--dark); font-weight: 700; font-size: 1.5rem; }
-.logo span { color: var(--primary); }
-.main-nav ul { display: flex; list-style: none; gap: 20px; }
-.main-nav a { text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.9rem; }
-
-/* Hero */
-.hero-section {
-    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-    color: white;
-    padding: 80px 0;
-    text-align: center;
-    margin-bottom: 40px;
-}
-.hero-section h2 { color: white; font-size: 2.5rem; margin-bottom: 10px; }
-
-/* Grid Layout */
-.main-content-grid {
-    display: grid;
-    grid-template-columns: 1fr 300px;
-    gap: 40px;
-}
-
-/* Article Cards */
-.article-card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    margin-bottom: 30px;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s ease;
-}
-
-.article-card:hover { transform: translateY(-5px); }
-
-.article-image {
-    height: 250px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-.category-pill {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: var(--primary);
-    color: white;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 600;
-}
-
-.article-body { padding: 25px; }
-.article-body h2 { margin-bottom: 15px; font-size: 1.5rem; }
-.article-body h2 a { text-decoration: none; color: var(--dark); }
-.article-excerpt { margin-bottom: 20px; font-size: 0.95rem; }
-
-.article-meta {
-    font-size: 0.85rem;
-    color: #64748b;
-    border-top: 1px solid #f1f5f9;
-    padding-top: 15px;
-}
-
-/* Sidebar */
-.sidebar-widget {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 30px;
-    box-shadow: var(--shadow);
-}
-.avatar { border-radius: 50%; margin-bottom: 15px; }
-
-.main-footer { text-align: center; padding: 40px 0; color: #94a3b8; }
-
-@media (max-width: 768px) {
-    .main-content-grid { grid-template-columns: 1fr; }
-}
+        blogContainer.innerHTML = posts.map(post => `
+            <article class="article-card rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-2xl mb-8">
+                <div class="md:w-48 h-48 md:h-auto bg-cover bg-center" style="background-image: url('${post.image}')"></div>
+                <div class="p-6 flex-1">
+                    <span class="text-xs font-bold uppercase tracking-widest text-sky-400">${post.category}</span>
+                    <h2 class="text-xl font-bold mt-2 mb-3">
+                        <a href="${post.link}" class="hover:text-sky-300 transition">${post.title}</a>
+                    </h2>
+                    <p class="text-slate-400 text-sm mb-4 line-clamp-2">${post.excerpt}</p>
+                    <div class="flex items-center text-xs text-slate-500 gap-4">
+                        <span><i class="far fa-calendar mr-1"></i> ${post.date}</span>
+                        <span><i class="far fa-user mr-1"></i> ${post.author}</span>
+                    </div>
+                </div>
+            </article>
+        `).join('');
+    }
+});
