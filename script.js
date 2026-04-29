@@ -137,13 +137,21 @@ function openPost(reversedIndex) {
 
     content.innerHTML = `
         <span class="text-sky-400 font-bold uppercase tracking-tighter text-sm">${post.category}</span>
-        <h1 class="text-3xl md:text-4xl font-extrabold mt-2 mb-6 text-white">${post.title}</h1>
+        <h1 class="text-3xl md:text-4xl font-extrabold mt-2 mb-6 text-white leading-tight">${post.title}</h1>
+        
         <div class="flex items-center gap-4 mb-8 text-slate-400 text-sm border-b border-slate-800 pb-6">
             <span><i class="far fa-user mr-2"></i>By ${post.author}</span>
             <span><i class="far fa-calendar mr-2"></i>${post.date}</span>
         </div>
-        <div class="prose prose-invert max-w-none text-slate-300 leading-relaxed text-lg whitespace-pre-wrap font-sans">
+
+        <div class="prose prose-invert max-w-none text-slate-300 leading-relaxed text-lg whitespace-pre-wrap font-sans text-left mb-10">
             ${post.excerpt.replace(/\\n/g, '\n')}
+        </div>
+
+        <div class="pt-6 border-t border-slate-800 text-center">
+            <a href="${post.link}" class="inline-block px-8 py-4 bg-sky-600 hover:bg-sky-500 text-white font-bold rounded-full transition-all transform hover:scale-105 shadow-lg shadow-sky-900/20">
+                Continue Reading Full Article <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+            </a>
         </div>
     `;
 
