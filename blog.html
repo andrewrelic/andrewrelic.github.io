@@ -3,53 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ModernBlog | Insights & Innovation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles2.css">
+    <title>Andrew Nguyen | Dev & Creative</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5788944115928715" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; }
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Custom card styling to match your theme */
+        .article-card {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        .article-card:hover {
+            transform: translateY(-4px);
+            border-color: #38bdf8;
+            box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.2);
+        }
+    </style>
 </head>
-<body>
-    <header class="main-header">
-        <div class="container header-content">
-            <h1 class="logo"><a href="#">Modern<span>Blog</span></a></h1>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Categories</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </nav>
+<body class="font-sans antialiased">
+
+    <nav class="fixed top-0 w-full z-50 glass">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="font-bold text-xl tracking-tight">Andrew <span class="gradient-text">Nguyen</span></a>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-300">
+                <a href="#" class="hover:text-sky-400 transition">Home</a>
+                <a href="#blog" class="hover:text-sky-400 transition">Blog</a>
+                <a href="#extensions" class="hover:text-sky-400 transition">Extensions</a>
+                <a href="resume.html" class="hover:text-sky-400 transition">Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-32 pb-20 px-6 text-center">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">
+            Andrew <span class="gradient-text">Nguyen</span>
+        </h1>
+        <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto">
+            Technology Professional & Developer building tools for the modern web.
+        </p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+            <a href="#blog" class="px-6 py-3 bg-sky-600 hover:bg-sky-500 rounded-full font-semibold transition">Read Blog</a>
+            <a href="#extensions" class="px-6 py-3 glass hover:bg-slate-800 rounded-full font-semibold transition">My Extensions</a>
+            <a href="resume.html" class="px-6 py-3 glass hover:bg-slate-800 rounded-full font-semibold transition">Resume</a>
         </div>
     </header>
 
-    <section class="hero-section">
-        <div class="container">
-            <h2>Welcome to the Creative Space</h2>
-            <p>Exploring the intersection of design, code, and productivity.</p>
+    <main id="blog" class="max-w-6xl mx-auto px-6 py-12">
+        <div class="flex flex-col md:flex-row gap-12">
+            
+            <div class="flex-1">
+                <h2 class="text-3xl font-bold mb-8">Latest <span class="text-sky-400">Updates</span></h2>
+                <div id="blog-container" class="grid gap-8">
+                    <div class="text-slate-500 animate-pulse">Fetching latest entries...</div>
+                </div>
+            </div>
+
+            <aside class="w-full md:w-80">
+                <div class="glass p-6 rounded-2xl sticky top-24">
+                    <h3 class="text-lg font-bold mb-4">Connect</h3>
+                    <p class="text-sm text-slate-400 mb-6">Following the latest in tech, from Pixel updates to web automation.</p>
+                    <div class="flex gap-4 text-2xl">
+                        <a href="#" class="hover:text-sky-400 transition"><i class="fab fa-github"></i></a>
+                        <a href="#" class="hover:text-sky-400 transition"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="hover:text-sky-400 transition"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <hr class="my-6 border-slate-700">
+                    <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+                    <input type="email" placeholder="Email address" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 mb-3 text-sm focus:outline-none focus:border-sky-500">
+                    <button class="w-full bg-sky-600 py-2 rounded-lg text-sm font-bold hover:bg-sky-500 transition">Subscribe</button>
+                </div>
+            </aside>
+
         </div>
-    </section>
+    </main>
 
-    <div class="container main-content-grid">
-        <main class="main-articles" id="blog-container">
-            <div class="loader">Loading latest stories...</div>
-        </main>
-        
-        <aside class="sidebar">
-            <div class="sidebar-widget about-widget">
-                <h3>About Author</h3>
-                <img src="https://i.pravatar.cc/100" alt="Avatar" class="avatar">
-                <p>Digital enthusiast sharing weekly insights on modern web trends.</p>
-            </div>
-            <div class="sidebar-widget">
-                <h3>Newsletter</h3>
-                <input type="email" placeholder="email@example.com" class="search-input">
-                <button class="btn btn-primary" style="width: 100%; margin-top: 10px;">Join</button>
-            </div>
-        </aside>
-    </div>
-
-    <footer class="main-footer">
-        <p>&copy; 2026 ModernBlog. Built for performance.</p>
+    <footer class="border-t border-slate-800 py-12 text-center text-slate-500 text-sm">
+        <p>&copy; 2026 Andrew Nguyen. Built with Tailwind & Curiosity.</p>
     </footer>
 
     <script src="blog.js"></script>
