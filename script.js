@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="p-6 flex-1 text-left">
                     <span class="text-xs font-bold uppercase tracking-widest text-sky-400">${post.category}</span>
                     <h2 class="text-xl font-bold mt-2 mb-3 text-white">${post.title}</h2>
-                    <p class="text-slate-400 text-sm mb-4 line-clamp-3">${post.excerpt}</p>
+                    <p class="text-slate-400 text-sm mb-4 line-clamp-3">${post.excerpt.replace(/\\n/g, '\n')}</p>
                     <div class="flex items-center text-xs text-slate-500 gap-4">
                         <span><i class="far fa-calendar mr-1"></i> ${post.date}</span>
                         <span><i class="far fa-user mr-1"></i> ${post.author}</span>
@@ -143,7 +143,7 @@ function openPost(reversedIndex) {
             <span><i class="far fa-calendar mr-2"></i>${post.date}</span>
         </div>
         <div class="prose prose-invert max-w-none text-slate-300 leading-relaxed text-lg whitespace-pre-wrap font-sans">
-            ${post.excerpt}
+            ${post.excerpt.replace(/\\n/g, '\n')}
         </div>
     `;
 
