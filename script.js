@@ -128,3 +128,31 @@ document.addEventListener('DOMContentLoaded', function() {
 // 4. Modal Functions (Global Scope)
 // ------------------------------------
 function openPost(reversedIndex) {
+    // Find original post from the global array
+    const post = allPosts[allPosts.length - 1 - reversedIndex];
+    const modal = document.getElementById('postModal');
+    const content = document.getElementById('modalContent');
+
+    if (!post || !modal) return;
+
+    content.innerHTML = `
+        <span class="text-sky-400 font-bold uppercase tracking-tighter text-sm">${post.category}</span>
+        <h1 class="text-3xl md:text-4xl font-extrabold mt-2 mb-6 text-white">${post.title}</h1>
+        <div class="flex items-center gap-4 mb-8 text-slate-400 text-sm border-b border-slate-800 pb-6">
+            <span><i class="far fa-user mr-2"></i>By ${post.author}</span>
+            <span><i class="far fa-calendar mr-2"></i>${post.date}</span>
+        </div>
+        <div class="prose prose-invert max-w-none text-slate-300 leading-relaxed text-lg whitespace-pre-wrap font-sans">
+            ${post.excerpt}
+        </div>
+    `;
+
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden'; 
+}
+
+function closeModal() {
+    const modal = document.getElementById('postModal');
+    if (modal) modal.classList.add('hidden');
+    document.body.style.overflow = 'auto'; 
+}
