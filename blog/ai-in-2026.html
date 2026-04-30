@@ -24,7 +24,7 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 40px 20px;
         }
@@ -88,13 +88,17 @@
             font-size: 1.1rem;
         }
 
+        .table-container {
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 30px 0;
             background: var(--card-bg);
-            border-radius: 8px;
-            overflow: hidden;
         }
 
         th, td {
@@ -108,7 +112,10 @@
             color: var(--accent-blue);
             text-transform: uppercase;
             font-size: 0.8rem;
+            white-space: nowrap;
         }
+
+        tr:last-child td { border-bottom: none; }
 
         .book-list {
             list-style: none;
@@ -132,6 +139,16 @@
             font-style: italic;
         }
 
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover { text-decoration: underline; }
+
         footer {
             margin-top: 80px;
             padding-top: 20px;
@@ -145,8 +162,10 @@
 <body>
 
 <div class="container">
+    <a href="../index.html" class="back-link">← Back to Journal</a>
+    
     <header>
-        <div class="meta">Status Report // April 2026</div>
+        <div class="meta">Status Report // 2026 Schedule</div>
         <h1>Intelligence in the Wild</h1>
         <p>Moving from generative toys to autonomous agents.</p>
     </header>
@@ -165,10 +184,74 @@
             <h3>Local Sovereignty</h3>
             <p>Enterprises are pulling away from massive public APIs in favor of highly optimized, locally-hosted models for privacy.</p>
         </div>
-        <div class="card">
+        <div class="card : card">
             <h3>Inference Efficiency</h3>
             <p>New compression techniques allow billion-parameter models to run on mobile hardware with minimal latency.</p>
         </div>
+    </div>
+
+    <h2>2026 AI Summit Schedule</h2>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Event</th>
+                    <th>Location</th>
+                    <th>Dates</th>
+                    <th>Key Focus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>NVIDIA GTC</strong></td>
+                    <td>San Jose, CA</td>
+                    <td>March 16 – 19</td>
+                    <td>Hardware & Agentic AI</td>
+                </tr>
+                <tr>
+                    <td><strong>HumanX</strong></td>
+                    <td>San Francisco, CA</td>
+                    <td>April 6 – 9</td>
+                    <td>Ethics & Design</td>
+                </tr>
+                <tr>
+                    <td><strong>AI & Big Data Expo</strong></td>
+                    <td>San Jose, CA</td>
+                    <td>May 18 – 19</td>
+                    <td>Enterprise Solutions</td>
+                </tr>
+                <tr>
+                    <td><strong>CVPR 2026</strong></td>
+                    <td>Seattle, WA</td>
+                    <td>June 7 – 12</td>
+                    <td>Computer Vision</td>
+                </tr>
+                <tr>
+                    <td><strong>SuperAI</strong></td>
+                    <td>Singapore</td>
+                    <td>June 10 – 11</td>
+                    <td>Foundational Models</td>
+                </tr>
+                <tr>
+                    <td><strong>AI Summit London</strong></td>
+                    <td>London, UK</td>
+                    <td>June 10 – 11</td>
+                    <td>Real-world Applications</td>
+                </tr>
+                <tr>
+                    <td><strong>AI Engineer World's Fair</strong></td>
+                    <td>San Francisco, CA</td>
+                    <td>June 29 – July 2</td>
+                    <td>LLM App Engineering</td>
+                </tr>
+                <tr>
+                    <td><strong>Ai4 2026</strong></td>
+                    <td>Las Vegas, NV</td>
+                    <td>August 4 – 6</td>
+                    <td>Industry & Robotics</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <h2>2026 Reading List</h2>
@@ -190,39 +273,6 @@
             <span class="book-author">by Mundie, Schmidt, & Kissinger</span>
         </div>
     </div>
-
-    <h2>Upcoming Summits</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Event</th>
-                <th>Location</th>
-                <th>Key Focus</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>NVIDIA GTC</td>
-                <td>San Jose, CA</td>
-                <td>Hardware & Robotics</td>
-            </tr>
-            <tr>
-                <td>HumanX</td>
-                <td>San Francisco, CA</td>
-                <td>Ethics & Design</td>
-            </tr>
-            <tr>
-                <td>SuperAI</td>
-                <td>Singapore</td>
-                <td>Foundational Models</td>
-            </tr>
-            <tr>
-                <td>Ai4 2026</td>
-                <td>Las Vegas, NV</td>
-                <td>Industry Application</td>
-            </tr>
-        </tbody>
-    </table>
 
     <footer>
         &copy; 2026 // Built for the Agentic Era
